@@ -10,7 +10,8 @@ myLayoutHook = smartBorders $ layoutHook def
 myKeys conf@(XConfig {XMonad.modMask = modm}) =
   M.fromList
     [ ((modm .|. shiftMask, xK_g), gotoMenu),
-      ((modm .|. shiftMask, xK_b), bringMenu)
+      ((modm .|. shiftMask, xK_b), bringMenu),
+      ((modm .|. shiftMask, xK_space), spawn "chromium-browser")
     ]
 
 newKeys conf = myKeys conf `M.union` keys def conf
