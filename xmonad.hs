@@ -11,6 +11,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) =
   M.fromList
     [ ((modm .|. shiftMask, xK_g), gotoMenu),
       ((modm .|. shiftMask, xK_b), bringMenu),
+      ((modm .|. shiftMask, xK_Control_R), spawn "emacsclient --create-frame"),
       ((modm .|. shiftMask, xK_space), spawn "chromium-browser")
     ]
 
