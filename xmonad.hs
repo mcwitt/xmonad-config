@@ -11,8 +11,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) =
   M.fromList
     [ ((modm .|. shiftMask, xK_g), gotoMenu),
       ((modm .|. shiftMask, xK_b), bringMenu),
-      ((modm .|. shiftMask, xK_Control_R), spawn "emacsclient --create-frame"),
-      ((modm .|. shiftMask, xK_space), spawn "chromium-browser")
+      ((modm .|. shiftMask, xK_y), spawn "emacsclient --create-frame"),
+      ((modm .|. shiftMask, xK_u), spawn "chromium-browser"),
+      ((modm .|. shiftMask, xK_s), spawn "dm-tool switch-to-greeter")
     ]
 
 newKeys conf = myKeys conf `M.union` keys def conf
